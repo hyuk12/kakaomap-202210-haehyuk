@@ -1,8 +1,11 @@
 package com.kakao.map.controller;
 
+
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 
 @Controller
 public class PageLoadTestController {
@@ -24,9 +27,13 @@ public class PageLoadTestController {
         return "/test/test2";
     }
 
-    @RequestMapping(value = "/map", method = RequestMethod.GET)
+//    @RequestMapping(value = "/map", method = RequestMethod.GET)
+    @GetMapping("/map")
     public String map() {
+
         return "kakaomap";
     }
+
+
 
 }
